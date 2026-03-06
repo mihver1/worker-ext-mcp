@@ -26,10 +26,12 @@ dev = [
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/worker_ext_mcp"]
-
 [tool.uv.sources]
 worker-core = { path = "../worker/packages/worker-core", editable = true }
 worker-ai = { path = "../worker/packages/worker-ai", editable = true }
+
+[tool.uv.pip]
+no-sources = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
